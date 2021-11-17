@@ -6,15 +6,16 @@ Semestre oppgave i HTML / CSS / Javascript vår 2020
 
 I denne oppgaven skal dere lage et verktøy for å vise data om Norges befolkning. 
 Oppgaven benytter seg av et utvalg fra tre datasett: 
-Befolkning: Datasett nummer 104857: http://data.ssb.no/api/v0/dataset/104857?lang=no
-Sysselsatte: Datasett nummer 100145: http://data.ssb.no/api/v0/dataset/100145?lang=no
-Utdanning: Datasett nummer 85432: http://data.ssb.no/api/v0/dataset/85432?lang=no 
+
+- Befolkning: Datasett nummer 104857: http://data.ssb.no/api/v0/dataset/104857?lang=no
+- Sysselsatte: Datasett nummer 100145: http://data.ssb.no/api/v0/dataset/100145?lang=no
+- Utdanning: Datasett nummer 85432: http://data.ssb.no/api/v0/dataset/85432?lang=no 
 
 I oppgaven skal vi benytte modifiserte kopier av disse datasettene. Hver av filene kan lastes ned fra: 
-Beskrivelser: http://wildboy.uib.no/~tpe056/folk  
-Befolkning: http://wildboy.uib.no/~tpe056/folk/104857.json  
-Sysselsatte: http://wildboy.uib.no/~tpe056/folk/100145.json  
-Utdanning: http://wildboy.uib.no/~tpe056/folk/85432.json  
+- Beskrivelser: http://wildboy.uib.no/~tpe056/folk  
+- Befolkning: http://wildboy.uib.no/~tpe056/folk/104857.json  
+- Sysselsatte: http://wildboy.uib.no/~tpe056/folk/100145.json  
+- Utdanning: http://wildboy.uib.no/~tpe056/folk/85432.json  
 
 Dere skal forfatte et HTML-dokument som består av tre hoveddeler: 
 Navigasjon, hovedinnhold, og bunntekst. 
@@ -35,7 +36,7 @@ Detaljer: Detaljer skal i utgangspunktet ikke vise noe informasjon, men brukeren
 • Etter disse punktvise detaljene skal dere også vise historisk utvikling i form av tabeller/lister for befolkningsvekst, sysselsettingsvekst og utdanningsvekst. I disse tabellene/listene kan dere selv velge om dere vil vise all data dere har, eller bare data for de årene som forekommer i alle datasettene. Altså; dere kan begrense årene dere viser data for til de årene som forekommer i alle tre datasett. 
 
 Sammenligning: Som i “detaljer” skal dere i utgangspunktet ikke vise noe informasjon her, men brukeren skal kunne skrive inn to gyldige kommunenummere. Når brukeren skriver inn dette, så skal dere vise utdanningsdata for det siste året (som datasettet dekker) innen kjønnskategoriene “Menn” og “Kvinner” i begge kommunene, for alle utdanningskategorier. For hver kjønnskategori og hver utdanningskategori skal dere indikere hvilken av kommunene som har høyest andel utdannede. Dere skal ogs˚a utrope en “vinner”. Vinneren er kommunen som har høyest andel utdannede i flest utdanningskategorier.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 -Skriv inn 2 gyldige kommunenummere. Vis utdanningsdata for det siste året som datasettet dekker, for menn og for kvinner, i begge kommunene. 
 -Utrop en “vinner” - kommunen som har høyest andel utdannede i flest utdanningskategorier
 
@@ -78,29 +79,6 @@ befolkning.load();
 4 Rapport og øvrige filer 
 
 Sammen med løsningen deres skal dere levere en rapport. I denne rapporten skal dere beskrive, kort, hver fil i besvarelsen (en/to setninger). I rapporten skal dere også besvare følgende spørsmål: 
-
-1. Lastes datasettene ned samtidig eller etter hverandre av programmet deres? Begrunn svaret deres. Henvis gjerne til koden og forklar når de tre forespørslene blir sendt (dere trenger ikke rettferdigjøre hvorfor programmet deres laster inn dataene på denne m˚aten). 
-
-2. Hvordan vet programmet deres når det tredje (siste) datasettet er lastet ned? Begrunn svaret deres. (Henvis gjerne til en variabel, eller et sted i koden der dette er sikkert.) 
-
-3. På små skjermer skal de historiske dataene presenteres vertikalt. På store skjermer skal de presenteres horisontalt. Forklar hvordan dere har løst dette. (Henvisgjerne til CSS-koden deres.) 
-Vi har brukt instanser av media query i CSS-koden som går på hver side til å bestemme hvordan websiden vår skal oppføre seg på skjermer av forskjellig størrelse, slik at tabellene er side om side på en datamaskinskjerm, og under hverandre på mindre skjermer, som iPad og mobil. 
-
-4. Har alle tre datasett nøyaktig de samme kommunene? Forklar kort hvordan dere fant dette svaret. Dere trenger ikke legge ved ekstra kode hvis dere har skrevet kode for å svare på dette spørsmålet, men bare forklare fremgangsmåten deres. 
-
-Rapporten, sammen med HTML-dokumentet og alle de nødvendige CSS- og JavaScript-filene, skal leveres i ´en zip-fil via Inspera (https://vurdering.uib.no/). Det vil bli publisert informasjon om fremgangsm˚ate p˚a mitt.uib. Dere kan levere mer enn ´en gang. Bare den siste innleveringen blir vurdert.
-
-
-
-
-
-
-
-
-
-
-
-INFO134 Semesteroppgave
 
 Filer: 
 
