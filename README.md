@@ -71,10 +71,12 @@ Objektet som konstrueres skal også ha en egenskap onload som i utgangspunktet e
 
 For eksempel: Anta at vi har skrevet en konstruktør for hvert datasett. Anta også at befolkningsdata er det siste som lastes ned. Da kan vi anta at alle datasettene er lastet ned når dette datasettet er klart. Anta videre at vi har to funksjoner: enableNavigationButtons og removeLoadingMessage, som henholdsvis lar brukeren velge hvilket element som skal vises og som fjerner en melding eller animasjon som sier at dataene lastes inn. (Ingen av disse funksjonene er påkrevd i i denne oppgaven.) Da kan vi se for oss følgende linjer med kode som implementerer denne oppførselen: 
 
-var befolkning = new Population(URL_wildboy_105857}; 
-befolkning.onload = function(){ enableNavigationButtons(); 
-removeLoadingMessage(); }; 
-befolkning.load(); 
+<script>
+  var befolkning = new Population(URL_wildboy_105857}; 
+  befolkning.onload = function(){ enableNavigationButtons(); 
+  removeLoadingMessage(); }; 
+  befolkning.load(); 
+</script>
 
 4 Rapport og øvrige filer 
 
@@ -85,25 +87,25 @@ Filer:
 Vår zip mappe inneholder tre mapper; HTML, CSS og JavaScript.  I HTML mappen finner vi fire HTML dokumenter, CSS mappen har fire CSS dokumenter og JavaScript mappen inneholder tre dokumenter. 
 
 HTML:
-introduction.html
-overview.html
-comparison.html
-details.html
+- introduction.html
+- overview.html
+- comparison.html
+- details.html
 
 Disse dokumentene inneholder html strukturen, samt laster inn de eksterne CSS og JavaScript filene. 
 
-JavaScript:
-overview.js
-details.js
-comparison.js
+- JavaScript:
+- overview.js
+- details.js
+- comparison.js
 
 JavaScript filene inneholder logikken til nettsiden og laster inn JSON filene som vises på nettsiden.
 
 CSS:
-style.css 
-overview.css
-details.css
-comparison.css
+- style.css 
+- overview.css
+- details.css
+- comparison.css
 
 CSS (Cascading Style Sheets) dokumentet inneholder selve utformingen og design av nettsiden. 
 
