@@ -1,5 +1,5 @@
 # INFO134_semestre_oppgave
-Semestre oppgave i HTML / CSS / Javascript vår 2020
+Semestre oppgave i HTML / CSS / Javascript - vår 2020
 
 
 1 Folk
