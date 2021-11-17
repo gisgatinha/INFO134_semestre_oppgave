@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <link rel="stylesheet" href="../css/details.css">
+    <script defer src="../JavaScript/details.js"></script>
+    <title>Assignment</title>
+  </head>
+
+    <body>
+
+      <div class="nav">
+        <a href="introduction.html">Introduksjon</a>
+        <a href="overview.html">Oversikt</a>
+        <a class = "active" href="details.html">Detaljer</a>
+        <a href="comparison.html">Sammenligning</a>
+      </div>
+
+      <header>
+        <h1>Detaljer</h1>
+        <p>Skriv inn et gyldig kommunenummer for å få mer informasjon</p>
+
+        <p><input type="text" id="Knummer" value="0101"><button onclick="søkDetaljer()">Søk</button> </p>
+      </header>
+      <main class="main">
+          <p id="resultater">
+
+          <table id="myTable">
+
+          </table>
+          <table id="Utdanning1">
+
+          </table>
+          <table id="Utdanning2">
+
+          </table>
+          </p>
+
+      </main>
+
+      <footer class= "footer">
+        <div> Dette er en oppgavebesvarelse i INFO134 vår2020. </div>
+      </footer>
+
+    </body>
+  </html>

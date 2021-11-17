@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+
+    <!--Link til ekstern styling-->
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <link rel="stylesheet" href="../css/overview.css" type="text/css">
+
+    <!-- Scrip tag til ekstern JavaScript fil-->
+    <script src="../JavaScript/overview.js"></script>
+
+    <!--Tittel til siden-->
+    <title>INFO134 - Klientprogrammering Semesteroppave</title>
+  </head>
+
+  <body>
+
+    <!-- Navigasjonsbaren til de fire sidene, med den aktive siden markert-->
+    <div class="nav">
+        <a href="introduction.html">Introduksjon</a>
+        <a class= "active" href="overview.html">Oversikt</a>
+        <a href="details.html">Detaljer</a>
+        <a href="comparison.html">Sammenligning</a>
+      </div>
+
+    <!--Tabellen for kommuner-->
+    <div id="oversikt">
+      <br>
+            <h1>Oversikt</h1>
+            <br>
+            <p>Under finner du en oversikt over alle kommunene med navn, kommunenummer, måling av totalbefolkning og befolkningsvekst.</p>
+            <table id="oversiktTable">
+              <br>
+                <thead id="tableHeader">
+                    <th>Kommune</th>
+                    <th>Nummer</th>
+                    <th>Menn</th>
+                    <th>Kvinner</th>
+                    <th>Befolkningsvekst</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td id ="kommunenavn"></td>
+                    <td id ="kommunenummer"></td>
+                    <td id ="menn"></td>
+                    <td id ="kvinner"></td>
+                    <td id ="befolkningsvekst"></td>
+                  </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    <!--Bunntekst-->
+    <footer class= "footer">
+      <div> Dette er en oppgavebesvarelse i INFO134 vår2020. </div>
+    </footer>
+
+  </body>
+</html>

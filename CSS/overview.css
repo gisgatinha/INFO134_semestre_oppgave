@@ -1,0 +1,39 @@
+
+/*Utforming av tabell*/
+table, th, td {
+  border: 3px solid black;
+  border-collapse: collapse;
+  text-align: left;
+  padding: 20px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Uforming av tabell tabell data*/
+td {
+  max-width: 200px;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 1vh;
+    background-color: white;
+}
+
+/*Gjør slik at tabellen vises riktig på mobil */
+#kommunenavn {
+  min-width: 250px;
+}
+#kommunenummer{
+  min-width: 40px;
+}
+
+/* Uforming av tabell header i Oversikt siden*/
+#tableHeader {
+  background-color:#D8DBE2;
+  color: #1B1B1E;
+}
+
+/*Utforming av hovedinnhold på oversikt siden*/
+#oversikt{
+    margin: 0 auto;
+    text-align: center;
+}

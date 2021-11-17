@@ -1,0 +1,57 @@
+/*Utforming av bakgrunnsfarge*/
+body{
+    background: radial-gradient( #D8DBE2, #95ADC4);
+}
+
+.header{
+  text-align: center;
+}
+
+/*Utforming av navigasjonsbaren*/
+.nav {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  font-size:20px;
+}
+
+/* Egenskaper til navnigasjonsbaren */
+.nav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Fargen til navigsjonsbaren endres når musen går over*/
+.nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+/* ny meny*/
+a.top:hover {
+    background-color:#ddd;
+    color: black;
+}
+
+/* Egen farge til den aktive siden som er i bruk*/
+a.active {
+  background-color: #58A4B0;
+  color: white;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 80%;
+  height: 20px;
+  left: 160px;
+  border-radius: 20px;
+  background-color: #58A4B0;
+  color: Black;
+  text-align: center;
+  /*opacity: 0.6; */
+ }
