@@ -131,7 +131,7 @@
                 <tbody>
                     <tr>
                         <td colspan="2" height=50px>
-                            <h2 id="Vinner1"><h2>
+                            <h2 id="Vinner1" style="color:red;"><h2>
                         </td>
                     </tr>
                     <tr id = "grunnskolekommune1">
@@ -175,7 +175,7 @@
                 <tbody>
                     <tr>
                         <td colspan="2" height=50px >
-                            <h2 id="Vinner2"> <h2>
+                            <h2 id="Vinner2"style="color:red" > <h2>
                         </td>
                     </tr>
                     <tr id = "grunnskolekommune2">
@@ -292,8 +292,6 @@
                 var kommune1Poeng = 0
                 var kommune2Poeng = 0
 
-
-/*
                 //Avgjør vinneren og printer dette
                 var sum1 = Beregne_vinner(kommune1);
                 var sum2 = Beregne_vinner(kommune2);
@@ -304,31 +302,23 @@
                     document.querySelector("#Vinner2").textContent = "Vinner!!!";
                     document.querySelector("#Vinner1").textContent = "";
                 } else {
-                    document.querySelector("#Vinner2").textContent = "Uavgjort";
-                    document.querySelector("#Vinner1").textContent = "Uavgjort";
+                    alert ("uavgjort")
 
                 }
-*/
-            function Beregne_vinner (kommune){
-                var sum = kommune['11'][kjonn][arstall] + kommune1['03a'][kjonn][arstall] + kommune1['04a'][kjonn][arstall]
-                return sum
-            }
-/*
+
             function Beregne_vinner (kommune){
                 var sum = kommune['01'][kjonn][arstall] + kommune['02a'][kjonn][arstall] +
                 kommune['11'][kjonn][arstall] + kommune1['03a'][kjonn][arstall] + kommune1['04a'][kjonn][arstall] +
                 kommune1['09a'][kjonn][arstall]
                 return sum
             }
-*/
-/*
+
                 if (kommune1['01'][kjonn][arstall] > kommune2['01'][kjonn][arstall]) {
                     kommune1Poeng+=1;
                     document.getElementById("grunnskolekommune1").style.background="rgba(255, 255, 255, 0.25)";
                     document.getElementById("grunnskolekommune2").style.background="inherit";
-                } 
-            
-                if (kommune1['01'][kjonn][arstall] < kommune2['01'][kjonn][arstall]) {
+                }
+                else if (kommune1['01'][kjonn][arstall] < kommune2['01'][kjonn][arstall]) {
                     kommune2Poeng+=1;
                     document.getElementById("grunnskolekommune2").style.background="rgba(255, 255, 255, 0.25)";
                     document.getElementById("grunnskolekommune1").style.background="inherit";
@@ -338,18 +328,18 @@
                     document.getElementById("videregåendekommune1").style.background="rgba(255, 255, 255, 0.25)";
                     document.getElementById("videregåendekommune2").style.background="inherit";
                 }
-                if (kommune1['02a'][kjonn][arstall] < kommune2['02a'][kjonn][arstall]) {
+                else if (kommune1['02a'][kjonn][arstall] < kommune2['02a'][kjonn][arstall]) {
                     kommune2Poeng+=1
                     document.getElementById("videregåendekommune2").style.background="rgba(255, 255, 255, 0.25)";
                     document.getElementById("videregåendekommune1").style.background="inherit";
                 }
-*/
+
                 if (kommune1['11'][kjonn][arstall] > kommune2['11'][kjonn][arstall]) {
                     kommune1Poeng+=1;
                     document.getElementById("fagskolekommune1").style.background="rgba(255, 255, 255, 0.25)";
                     document.getElementById("fagskolekommune2").style.background="inherit";
                 }
-                if (kommune1['11'][kjonn][arstall] < kommune2['11'][kjonn][arstall]) {
+                else if (kommune1['11'][kjonn][arstall] < kommune2['11'][kjonn][arstall]) {
                     kommune2Poeng+=1;
                     document.getElementById("fagskolekommune2").style.background="rgba(255, 255, 255, 0.25)";
                     document.getElementById("fagskolekommune1").style.background="inherit";
@@ -360,7 +350,7 @@
                     document.getElementById("unikortkommune1").style.background="rgba(255, 255, 255, 0.25)";
                     document.getElementById("unikortkommune2").style.background="inherit";
                 }
-                if (kommune1['03a'][kjonn][arstall] < kommune2['03a'][kjonn][arstall]) {
+                else if (kommune1['03a'][kjonn][arstall] < kommune2['03a'][kjonn][arstall]) {
                     kommune2Poeng+=1;
                     document.getElementById("unikortkommune2").style.background="rgba(255, 255, 255, 0.25)";
                     document.getElementById("unikortkommune1").style.background="inherit";
@@ -371,28 +361,24 @@
                     document.getElementById("unilangkommune1").style.background="rgba(255, 255, 255, 0.25)";
                     document.getElementById("unilangkommune2").style.background="inherit";
                 }
-                if (kommune1['04a'][kjonn][arstall] < kommune2['04a'][kjonn][arstall]) {
+                else if (kommune1['04a'][kjonn][arstall] < kommune2['04a'][kjonn][arstall]) {
                     kommune2Poeng++
                     document.getElementById("unilangkommune2").style.background="rgba(255, 255, 255, 0.25)";
                     document.getElementById("unilangkommune1").style.background="inherit";
                 }
 
-                console.log(kommune2Poeng);
-                console.log(kommune1Poeng);
-            
-                //Avgjør vinneren og printer dette
-
-                if (kommune1Poeng> kommune2Poeng) {
-                    document.querySelector("#Vinner1").textContent = "Vinner!!!";
-                    document.querySelector("#Vinner2").textContent = "";
-                } else if (kommune2Poeng > kommune1Poeng) {
-                    document.querySelector("#Vinner2").textContent = "Vinner!!!";
-                    document.querySelector("#Vinner1").textContent = "";
-                } else {
-                    document.querySelector("#Vinner2").textContent = "Uavgjort";
-                    document.querySelector("#Vinner1").textContent = "Uavgjort";
-
+                if (kommune1['09a'][kjonn][arstall] > kommune2['09a'][kjonn][arstall]) {
+                    kommune1Poeng+=1;
+                    document.getElementById("uoppgittkommune1").style.background="rgba(255, 255, 255, 0.25)";
+                    document.getElementById("uoppgittkommune2").style.background="inherit";
                 }
+                else if (kommune1['09a'][kjonn][arstall] < kommune2['09a'][kjonn][arstall]) {
+                    kommune2Poeng+=1;
+                    document.getElementById("uoppgittkommune2").style.background="rgba(255, 255, 255, 0.25)";
+                    document.getElementById("uoppgittkommune1").style.background="inherit";
+                }
+               
+                
              
 
 

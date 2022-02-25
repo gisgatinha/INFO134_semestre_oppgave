@@ -97,29 +97,22 @@ function søkDetaljer(){
         //Kjører funksjon for å hente ut antall befolkning ut i fra kommunenummer
         var antall = henteBefolkning(kommunenr, årstall);
 
-        //Kjører funksjon for å hente ut høyere utdanningsprosent ut i fra kommunenummer
-        var menn_ = henteUtdanning(kommunenr, årstall, "Menn");
-        var kvinner_ = henteUtdanning(kommunenr, årstall, "Kvinner");
-        var mennB = befolkning_per_kjonn(kommunenr, årstall, "Menn");
-        var kvinnerB = befolkning_per_kjonn(kommunenr, årstall, "Kvinner");
-        var antallMenn = beregneAntall (menn_, mennB);
-        var antallKvinner = beregneAntall (kvinner_, kvinnerB);
-        var antallHøyereUtdanning = (antallMenn+antallKvinner);
-        var utdanning_prosent = menn_+kvinner_;
+        //Kjører funksjon for å hente ut høyere utdaningsprosent ut i fra kommunenummer
+        var h_utdanning = henteUtdanning(kommunenr, årstall);
 
         //Kjører funksjon for å hente ut sysselsettingprosent ut i fra kommunenummer
         var sysselsetting = henteSysselsatte(kommunenr, årstall, "Begge kjønn");
 
         //Konverterer prosent til antall ut i fra antall befolkning
         var antallSysselsetting = beregneAntall (sysselsetting, antall)
-        //var antallHøyereUtdanning = beregneAntall (h_utdanning, antall)
+        var antallHøyereUtdanning = beregneAntall (h_utdanning, antall)
 
         // Viser ut resultater til de siste målte statistikk (befolkning, sysselsetting og utdanning)
         document.getElementById("resultater").innerHTML =
         `<h4> Kommune: <strong> ${kommunenr} - ${kommunenavn} </strong> </h4>
         <p> Befolkning (${årstall}): ${antall}  </p>
         <p> Sysselsatte (${årstall}):  ${antallSysselsetting} (${sysselsetting}) %</p>
-        <p> Høyere utdanning (${årstall}): ${antallHøyereUtdanning} (${utdanning_prosent}) %</p>`;
+        <p> Høyere utdanning (${årstall}): ${antallHøyereUtdanning} (${h_utdanning}) %</p>`;
 
         // Oppretter vi en tabel med historisk utvikling - befolkning og sysselsetting
         var overskrift = document.getElementById("myTable");
@@ -421,7 +414,7 @@ function søkDetaljer(){
 
 }
 
-/*
+
 // funksjon for å hente ut data om høyere utdanning fra menn og kvinne
 function henteUtdanning(kommunenr, årstall){
 	var kommunenavn = datasett.getNameFromKommunenummer(kommunenr);
@@ -437,33 +430,18 @@ function henteUtdanning(kommunenr, årstall){
     var kvinner_lang = kommune["04a"]["Kvinner"][årstall];
     var kvinner_kort = kommune["03a"]["Kvinner"][årstall];
     var kvinner_fag = kommune["11"]["Kvinner"][årstall];
-     
+
+	//Sum fagskole, kort og lang høyere utdanning på menn og kvinner
     var h_utdanning = ((Number(menn_kort)+Number(kvinner_kort)/ 2)+
                         (Number(menn_lang)+Number(kvinner_lang) / 2)/ 2)  +
                          ((Number(menn_fag)+Number(kvinner_fag) /2) /2);
-    
+
 	//Sjekker om det ikke finnes data
 	if (h_utdanning =="0.0" || h_utdanning == "-"){
 		// Hvis det er tom for data, setter verdiet "-"
 		var h_utdanning = "-";
 	}
-    return h_utdanning;
-    */
-
-// funksjon for å hente ut data om høyere utdanning fra menn og kvinne
-function henteUtdanning(kommunenr, årstall, kjonn){
-	var kommunenavn = datasett.getNameFromKommunenummer(kommunenr);
-	var kommune = datasett.getInfo(kommunenr);
-
-	//henter ut data om menn som tok høyere utdanning (kort) og fagskole
-    var kort = kommune["03a"][kjonn][årstall];
-    var lang = kommune["04a"][kjonn][årstall];
-    var fag = kommune["11"][kjonn][årstall];
-    //Sum fagskole, kort og lang høyere utdanning på menn og kvinner
-    var prosent_utdanning = (kort+lang+fag)
-    return prosent_utdanning
-    
-
+	return h_utdanning;
 }
 // funksjon for å hente ut data om høyere utdanning fra menn og kvinne
 function finneUtdanning(kommunenr, årstall, nivå, kjonn){
